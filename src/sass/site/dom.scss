@@ -1,35 +1,68 @@
+html { overflow-y: scroll; }
+
 body {
   background: $black;
+  display: flex;
 
-  @include breakpoint($mobile) {
-    background: $warning;
-  }
+  //@include breakpoint($mobile) {
+  //  background: $warning;
+  //}
+  //
+  //@include breakpoint($tablet) {
+  //  background: $info;
+  //}
+  //
+  //@include breakpoint($desktop-small) {
+  //  background: $alert;
+  //}
+  //
+  //@include breakpoint($desktop) {
+  //  background: $notification;
+  //}
+  //
+  //@include breakpoint($wide) {
+  //  background: $black;
+  //}
+  //
+  //@include breakpoint($extra-wide) {
+  //  background: $success;
+  //}
+}
 
-  @include breakpoint($tablet) {
-    background: $info;
-  }
+.none {
+  opacity: 0;
+}
 
-  @include breakpoint($desktop-small) {
-    background: $alert;
-  }
-
-  @include breakpoint($desktop) {
-    background: $notification;
-  }
-
-  @include breakpoint($wide) {
-    background: $black;
-  }
-
-  @include breakpoint($extra-wide) {
-    background: $success;
-  }
+.aside {
+  max-width: 320px;
 }
 
 .root {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: $white;
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.grid {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .grid-sizer,
+  .grid-item {
+    margin-bottom: 10px;
+    width: calc(20% - 10px);
+
+    img {
+      display: block;
+      max-width: 100%;
+      position: relative;
+      width: 100%;
+    }
+  }
 }

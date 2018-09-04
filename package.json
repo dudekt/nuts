@@ -20,7 +20,10 @@
     "serve": "webpack-dev-server -d --progress --color --open --config config/webpack.dev.js"
   },
   "dependencies": {
-    "breakpoint-sass": "^2.7.1"
+    "animate.css": "^3.7.0",
+    "breakpoint-sass": "^2.7.1",
+    "imagesloaded": "^4.1.4",
+    "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
