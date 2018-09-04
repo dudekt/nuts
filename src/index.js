@@ -39,8 +39,9 @@ imagesLoaded(elem, () => {
   for (let i = 0; i < item.length; i++) {
     const a = 55;
     item[i].classList.add(...animation);
-    item[i].style.transitionDuration = '500ms';
+    item[i].style.transitionDuration = '250ms';
     item[i].style.animationDelay = `${a * i}ms`;
+    item[i].style.animationDuration = '250ms';
     // item[i].style.animationDirection = `reverse`;
     item[i].style.zIndex = `-${i}`;
   }
