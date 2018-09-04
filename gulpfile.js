@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 var fs = require('fs');
 var browserify = require('browserify');
 var watchify = require('watchify');
@@ -46,7 +47,17 @@ gulp.task('build', ['build-persistent'], function() {
   process.exit(0);
 });
 
-gulp.task('watch', ['build-persistent'], function() {
+gulp.task('sass', function () {
+  return gulp.src('./src/style/**/*.scss')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./src/style/**/*.scss', ['sass']);
+});
+
+gulp.task('watch', ['sass', 'build-persistent'], function() {
 
   browserSync({
     server: {
