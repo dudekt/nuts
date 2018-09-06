@@ -21,9 +21,12 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
+    "baguettebox.js": "^1.10.0",
+    "basiclightbox": "^4.0.3",
     "breakpoint-sass": "^2.7.1",
     "imagesloaded": "^4.1.4",
-    "masonry-layout": "^4.2.2"
+    "masonry-layout": "^4.2.2",
+    "simplebar": "3.0.0-beta.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
