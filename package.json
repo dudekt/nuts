@@ -17,13 +17,15 @@
     "lint": "eslint src",
     "stylelint": "stylelint src/sass/**/*.scss",
     "build": "webpack -p --progress --config config/webpack.prod.js",
-    "serve": "webpack-dev-server -d --progress --color --open --config config/webpack.dev.js"
+    "serve": "webpack-dev-server -d --progress --color --open --config config/webpack.dev.js",
+    "images": "webpack -p config/images.js"
   },
   "dependencies": {
     "animate.css": "^3.7.0",
     "baguettebox.js": "^1.10.0",
     "basiclightbox": "^4.0.3",
     "breakpoint-sass": "^2.7.1",
+    "imagemagick": "^0.1.3",
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",
     "simplebar": "3.0.0-beta.0"
@@ -37,6 +39,8 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
+    "ejs": "^2.6.1",
+    "ejs-html-loader": "^3.1.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^2.0.0",

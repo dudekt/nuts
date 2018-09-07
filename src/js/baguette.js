@@ -2,9 +2,11 @@ import baguetteBox from 'baguettebox.js';
 
 const BagietaConfig = () => {
   baguetteBox.run('.grid', {
+    animation: 'fadeIn',
+    noScrollbars: true,
     // buttons: false,
     captions: false,
-    overlayBackgroundColor: 'rgba(0, 0, 0, 0.9)',
+    overlayBackgroundColor: 'rgba(255, 255, 255, 1)',
   });
 };
 
