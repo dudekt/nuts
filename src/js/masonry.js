@@ -1,12 +1,21 @@
-import Masonry from 'masonry-layout';
+// import Masonry from 'masonry-layout';
+import Shuffle from 'shufflejs';
 
 const Msnry = (elem) => {
-  new Masonry(elem, {
+  // new Masonry(elem, {
+  //   itemSelector: '.grid-item',
+  //   columnWidth: '.grid-sizer',
+  //   percentPosition: true,
+  //   gutter: 10,
+  //   transitionDuration: 0,
+  //   // horizontalOrder: true,
+  // });
+
+  new Shuffle(elem, {
+    buffer: 10,
     itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true,
-    gutter: 10,
-    transitionDuration: 0,
+    sizer: '.grid-sizer',
+    useTransforms: false,
   });
 };
 

@@ -46,15 +46,18 @@ body {
 
 .root {
   display: flex;
-  flex-direction: row;
-  padding: 20px;
+  flex-direction: column;
+  padding: 50px;
 
   @include breakpoint($mobile) {
-    padding-right: 20px;
+    padding: 10px;
+    padding-right: 0;
   }
 
   @include breakpoint($tablet) {
-    padding-right: 10px;
+    flex-direction: row;
+    padding: 50px;
+    padding-right: 40px;
   }
 
   .aside {
@@ -74,6 +77,25 @@ body {
   }
 }
 
+.mobile {
+  @include breakpoint($mobile) {
+    
+  }
+  @include breakpoint($tablet) {
+    display: none;
+  }
+}
+
+.author {
+  line-height: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 0.5em;
+  margin-bottom: 30px;
+}
+
 .grid {
   margin: 0;
   padding: 0;
@@ -81,7 +103,8 @@ body {
 
   .grid-sizer,
   .grid-item {
-    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     width: calc(100% - #{$side-width});
 
     @include breakpoint($mobile) {
@@ -91,19 +114,11 @@ body {
 
     @include breakpoint($tablet) {
       pointer-events: auto;
-      width: calc(50% - 10px);
+      width: 50%;
     }
 
     @include breakpoint($desktop) {
-      width: calc(25% - 10px);
-    }
-
-    @include breakpoint($wide) {
-      width: calc(25% - 10px);
-    }
-
-    @include breakpoint($extra-wide) {
-      width: calc(25% - 10px);
+      width: 25%;
     }
 
     &::after {
