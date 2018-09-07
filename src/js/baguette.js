@@ -2,7 +2,7 @@ import baguetteBox from 'baguettebox.js';
 
 const BagietaConfig = () => {
   baguetteBox.run('.grid', {
-    buttons: false,
+    // buttons: false,
     captions: false,
     overlayBackgroundColor: 'rgba(0, 0, 0, 0.9)',
   });
