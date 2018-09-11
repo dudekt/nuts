@@ -79,7 +79,7 @@ body {
 
 .mobile {
   @include breakpoint($mobile) {
-    
+
   }
   @include breakpoint($tablet) {
     display: none;
@@ -151,7 +151,7 @@ body {
 }
 
 #baguetteBox-overlay {
-  left: $side-width;
+  left: calc(#{$side-width} + 50px);
   width: calc(100% - #{$side-width});
 
   svg {
@@ -203,10 +203,6 @@ body {
   }
 }
 
-#baguetteBox-overlay .full-image {
-  //padding: 4vh;
-}
-
 #baguetteBox-overlay .full-image img {
   box-shadow: none;
   padding: 20px;
@@ -233,6 +229,28 @@ body {
 
     &:hover {
       color: rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+.dots {
+  list-style: none;
+  margin-left: -3px;
+
+  .dot {
+    $size: 4px;
+
+    background: rgba(0, 0, 0, 0.5);
+    border: 4px solid white;
+    cursor: pointer;
+    display: inline-block;
+    height: $size;
+    line-height: 0.2;
+    padding: 2px;
+    width: $size;
+
+    &:hover {
+      background: rgba(0, 0, 0, 1);
     }
   }
 }
