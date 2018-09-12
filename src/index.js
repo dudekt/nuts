@@ -3,7 +3,7 @@ import imagesLoaded from 'imagesloaded';
 import 'sass/styles.scss';
 
 import Msnry from './js/masonry';
-import BagietaConfig, { clickInDot } from './js/baguette';
+import BagietaConfig, { clickInDot, closeBaguette } from './js/baguette';
 
 const elem = document.querySelector('.grid');
 
@@ -31,8 +31,14 @@ imagesLoaded(elem, () => {
 
     document.getElementById(i).onclick = function clicked() {
       clickInDot(i);
+
+      this.classList.add('chuj');
     };
   }
+
+  const hideBagieta = document.querySelector('.show-thumbnails');
+
+  closeBaguette(hideBagieta);
 
   BagietaConfig();
 });

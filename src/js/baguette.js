@@ -15,4 +15,11 @@ export const clickInDot = (index) => {
   baguetteBox.show(index, gallery);
 };
 
+export const closeBaguette = (elem) => {
+  const button = elem;
+  button.onclick = function clicked() {
+    baguetteBox.hide();
+  };
+};
+
 export default BagietaConfig;
